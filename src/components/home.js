@@ -14,7 +14,7 @@ class Home extends Component{
 
                             <h1>Contador y Administrador</h1>
                             <hr/>
-                            <p>Contabilidad | Banca & Finanzas | Economía | Administración & Gestión Negocios</p>
+                            <p>Conta | Banca & Finanzas | Economía | Administración & Gestión Negocios</p>
 
                             <div className="social-links">
 
