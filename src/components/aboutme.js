@@ -39,6 +39,9 @@ class AboutMe extends Component{
 
     //Metodo validar. Verifica que todos los labels anteriores han sido llenados para saber cuando puede ser enviados los datos.
     validate(){
+
+        var expresion = /\w+@+[a-z]+\.+[a-z]/;
+
         if((this.state.firstname === '') || (this.state.lastname === '') || (this.state.email === '') || (this.state.about === '')){
            /* this.setState({
                 message: 'Faltan datos por ingresar'                //SE COMENTÓ PARA ENVIAR EL MENSAJE A TRAVES DE UN ALERT
@@ -60,7 +63,10 @@ class AboutMe extends Component{
             alert("El correo que introdujo es muy largo");
             return false;
         }
-
+        else if(!expresion.test(this.state.email)){
+            alert("El correo no es válido");
+            return false;
+        }
         return true;
     }
 
@@ -79,6 +85,7 @@ class AboutMe extends Component{
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
                            standard dummy text ever since the 1500s.</p>
                         <hr style={{borderTop: '3px solid silver', width:'50%'}}/>
+
                         <div className="form-body">
                             <div className="form-title">SOLICITAR CURRICULUM</div>
                             <div>                   
@@ -101,6 +108,7 @@ class AboutMe extends Component{
                                 <a href="/aboutme"> <button onClick={this.save.bind(this)}>Enviar</button> </a>                             
                             </div>
                         </div>
+
                     </Cell>
                     <Cell className="aboutme-right-col" col={8}>
                         <h2>Educación</h2>
