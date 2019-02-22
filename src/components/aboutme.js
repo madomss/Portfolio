@@ -30,17 +30,21 @@ class AboutMe extends Component{
             return;
         }
 
-        this.setState({
-            message: '   Enviado correctamente a su correo'
-        })
+        alert("ENVIADO EXITOSAMENTE");
+
+        /*this.setState({
+            message: '   Enviado correctamente a su correo'         //SE COMENTÓ PARA ENVIAR EL MENSAJE A TRAVES DE UN ALERT
+        })*/
     }
 
     //Metodo validar. Verifica que todos los labels anteriores han sido llenados para saber cuando puede ser enviados los datos.
     validate(){
         if((this.state.firstname === '') || (this.state.lastname === '') || (this.state.email === '') || (this.state.about === '')){
-            this.setState({
-                message: 'Faltan datos por ingresar'
-            })
+           /* this.setState({
+                message: 'Faltan datos por ingresar'                //SE COMENTÓ PARA ENVIAR EL MENSAJE A TRAVES DE UN ALERT
+            })*/
+
+            alert("TODOS LOS CAMPOS SON OBLIGATORIOS");
             
             return false;
         }
@@ -63,7 +67,6 @@ class AboutMe extends Component{
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
                            standard dummy text ever since the 1500s.</p>
                         <hr style={{borderTop: '3px solid silver', width:'50%'}}/>
-
                         <div className="form-body">
                             <div>                   
                                 <label htmlFor="firstname">Nombre</label><br/>
@@ -106,7 +109,6 @@ class AboutMe extends Component{
                                                when an unknown printer took a galley of type and scrambled it to make a type specimen book."
                         />
                         <hr style={{borderTop: '3px solid #e22947'}}/>
-
                         <h2>Experience</h2>
                         <Experience
                             startYear={2009}
@@ -131,5 +133,4 @@ class AboutMe extends Component{
         )
     }    
 }
-
 export default AboutMe;
