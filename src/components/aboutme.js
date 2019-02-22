@@ -68,6 +68,7 @@ class AboutMe extends Component{
                            standard dummy text ever since the 1500s.</p>
                         <hr style={{borderTop: '3px solid silver', width:'50%'}}/>
                         <div className="form-body">
+                            <div className="form-title">SOLICITAR CURRICULUM</div>
                             <div>                   
                                 <label htmlFor="firstname">Nombre</label><br/>
                                 <input value={this.state.firstname} onChange={this.onChange.bind(this)} name="firstname" id="firstname" type="text" placeholder="Nombre"/>
