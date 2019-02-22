@@ -67,19 +67,19 @@ class AboutMe extends Component{
                         <div className="form-body">
                             <div>                   
                                 <label htmlFor="firstname">Nombre</label><br/>
-                                <input value={this.state.firstname} onChange={this.onChange.bind(this)} name="firstname" id="firstname" type="text"/>
+                                <input value={this.state.firstname} onChange={this.onChange.bind(this)} name="firstname" id="firstname" type="text" placeholder="Nombre"/>
                             </div>
                             <div>
                                 <label htmlFor="lastname">Apellido</label><br/>
-                                <input value={this.state.lastname} onChange={this.onChange.bind(this)} name="lastname" id="lastname" type="text"/>
+                                <input value={this.state.lastname} onChange={this.onChange.bind(this)} name="lastname" id="lastname" type="text" placeholder="Apellido"/>
                             </div>  
                             <div>
                                 <label htmlFor="email">Correo</label><br/>
-                                <input value={this.state.email} onChange={this.onChange.bind(this)} name="email" id="email" type="text"/>
+                                <input value={this.state.email} onChange={this.onChange.bind(this)} name="email" id="email" type="text" placeholder="Email"/>
                             </div>
                             <div>
                                 <label htmlFor="about">Motivo por el solicita el curriculum</label><br/>
-                                <textarea value={this.state.about} onChange={this.onChange.bind(this)} name="about" id="about" />
+                                <textarea value={this.state.about} onChange={this.onChange.bind(this)} name="about" id="about" placeholder="Comentario"/>
                             </div>
                             <div>
                                 <button onClick={this.save.bind(this)}>Enviar</button>
