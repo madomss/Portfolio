@@ -48,6 +48,18 @@ class AboutMe extends Component{
             
             return false;
         }
+        else if(this.state.firstname.length > 30){
+            alert("El nombre que introdujo es muy largo");
+            return false;
+        }
+        else if(this.state.lastname.length > 30){
+            alert("El apellido que introdujo es muy largo");
+            return false;
+        }
+        else if(this.state.email.length > 100){
+            alert("El correo que introdujo es muy largo");
+            return false;
+        }
 
         return true;
     }
@@ -79,15 +91,14 @@ class AboutMe extends Component{
                             </div>  
                             <div>
                                 <label htmlFor="email">Correo</label><br/>
-                                <input value={this.state.email} onChange={this.onChange.bind(this)} name="email" id="email" type="text" placeholder="Email"/>
+                                <input value={this.state.email} onChange={this.onChange.bind(this)} name="email" id="email" type="email" placeholder="Email"/>
                             </div>
                             <div>
                                 <label htmlFor="about">Motivo por el solicita el curriculum</label><br/>
                                 <textarea value={this.state.about} onChange={this.onChange.bind(this)} name="about" id="about" placeholder="Comentario"/>
                             </div>
-                            <div>
-                                <button onClick={this.save.bind(this)}>Enviar</button>
-                                <span style={{color: 'green'}}><b>{this.state.message}</b></span>
+                            <div> 
+                                <a href="/aboutme"> <button onClick={this.save.bind(this)}>Enviar</button> </a>                             
                             </div>
                         </div>
                     </Cell>
