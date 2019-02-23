@@ -12,7 +12,6 @@ class AboutMe extends Component{
             lastname: '',
             email: '',
             about: '',
-            message: '',
         }
     }
 
@@ -31,7 +30,6 @@ class AboutMe extends Component{
         }
 
         alert("ENVIADO EXITOSAMENTE");
-
         /*this.setState({
             message: '   Enviado correctamente a su correo'         //SE COMENTÓ PARA ENVIAR EL MENSAJE A TRAVES DE UN ALERT
         })*/
@@ -46,9 +44,7 @@ class AboutMe extends Component{
            /* this.setState({
                 message: 'Faltan datos por ingresar'                //SE COMENTÓ PARA ENVIAR EL MENSAJE A TRAVES DE UN ALERT
             })*/
-
-            alert("TODOS LOS CAMPOS SON OBLIGATORIOS");
-            
+            alert("TODOS LOS CAMPOS SON OBLIGATORIOS");         
             return false;
         }
         else if(this.state.firstname.length > 30){
@@ -86,8 +82,8 @@ class AboutMe extends Component{
                            standard dummy text ever since the 1500s.</p>
                         <hr style={{borderTop: '3px solid silver', width:'50%'}}/>
 
-                        <div className="form-body">
-                            <div className="form-title">SOLICITAR CURRICULUM</div>
+                        <form className="form-body">
+                            <div className="form-title" style={{textAlign: "center"}}>SOLICITAR CURRICULUM</div>
                             <div>                   
                                 <label htmlFor="firstname">Nombre</label><br/>
                                 <input value={this.state.firstname} onChange={this.onChange.bind(this)} name="firstname" id="firstname" type="text" placeholder="Nombre"/>
@@ -101,13 +97,13 @@ class AboutMe extends Component{
                                 <input value={this.state.email} onChange={this.onChange.bind(this)} name="email" id="email" type="email" placeholder="Email"/>
                             </div>
                             <div>
-                                <label htmlFor="about">Motivo por el solicita el curriculum</label><br/>
+                                <label htmlFor="about">Motivo por el cual solicita el curriculum</label><br/>
                                 <textarea value={this.state.about} onChange={this.onChange.bind(this)} name="about" id="about" placeholder="Comentario"/>
                             </div>
                             <div> 
-                                <a href="/aboutme"> <button onClick={this.save.bind(this)}>Enviar</button> </a>                             
+                                <button onClick={this.save.bind(this)}>Enviar</button>                            
                             </div>
-                        </div>
+                        </form>
 
                     </Cell>
                     <Cell className="aboutme-right-col" col={8}>
