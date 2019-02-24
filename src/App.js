@@ -14,15 +14,10 @@ class App extends Component {
             <Header className="header-color" title={<Link style={{textDecoration: 'none', color: 'white'}} to="/">Portafolio</Link>} scroll>
                 <Navigation>
                     <Link to="/aboutme">About Me</Link>
+                    <Link to="/Portfolio">Portfolio</Link>
                     <Link to="/contact">Contact</Link>
                 </Navigation>
             </Header>
-            <Drawer title="Portafolio">
-                <Navigation>
-                  <Link to="/aboutme">About Me</Link>
-                  <Link to="/contact">Contact</Link>
-                </Navigation>
-            </Drawer>
             <Content>
                 <div className="page-content" />
                 <Main/>
