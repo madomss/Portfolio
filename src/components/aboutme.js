@@ -82,6 +82,29 @@ class AboutMe extends Component{
                            standard dummy text ever since the 1500s.</p>
                         <hr style={{borderTop: '3px solid silver', width:'50%'}}/>
 
+                        <form className="form-body" action="enviar.php" method="post">
+                            <div className="form-title" style={{textAlign: "center"}}>SOLICITAR CURRICULUM</div>
+                            <div>                   
+                                <label htmlFor="firstname">Nombre</label><br/>
+                                <input value={this.state.firstname} onChange={this.onChange.bind(this)} name="firstname" id="firstname" type="text" placeholder="Nombre" required/>
+                            </div>
+                            <div>
+                                <label htmlFor="lastname">Apellido</label><br/>
+                                <input value={this.state.lastname} onChange={this.onChange.bind(this)} name="lastname" id="lastname" type="text" placeholder="Apellido" required/>
+                            </div>  
+                            <div>
+                                        <label htmlFor="email">Correo</label><br/>
+                                <input value={this.state.email} onChange={this.onChange.bind(this)} name="email" id="email" type="email" placeholder="Email" required/>
+                            </div>
+                            <div>
+                                <label htmlFor="about">Motivo por el cual solicita el curriculum</label><br/>
+                                <textarea value={this.state.about} onChange={this.onChange.bind(this)} name="about" id="about" placeholder="Comentario" required/>
+                            </div>
+                            <div> 
+                                <button onClick={this.save.bind(this)} type="submit">Enviar</button>                            
+                            </div>
+                        </form>
+
                     </Cell>
                     <Cell className="aboutme-right-col" col={8}>
                         <h2>Educación</h2>
