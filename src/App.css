@@ -108,6 +108,73 @@
   padding-right: 5rem;
 }
 
+/* Portfolio Page*/
+
+.portfolio-body{
+  background: #2C3E50;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.form-contact{
+  background: white;
+  width: 75%;
+  height: 75%;
+  margin: 50px auto;
+  padding: 20px 40px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.form-contact .user-info{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 100%;
+  margin: 0px auto;
+}
+
+.user-info h2{
+  font-family: 'Anton', sans-serif;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  padding: 0 0 0 0;
+}
+
+.user-info label{
+  font-family: 'Oxygen', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  text-align: left;
+  margin-bottom:0px;
+}
+
+.user-info input, textarea{
+  width: 100%;
+  padding: 8px 0px 5px;
+  border: none;
+  border-bottom: 2px solid #D1D1D1;
+  margin-bottom: 15px;
+
+  font-family: 'Open sans';
+  color: #5A5A5A;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+:focus{
+  outline: none;
+}
+
+
+
 /*AboutMe Page*/
 
 .aboutme-body{
